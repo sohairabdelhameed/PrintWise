@@ -1,0 +1,10 @@
+
+
+/* Your custom styles go here */
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-color: white;
+}
