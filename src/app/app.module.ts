@@ -4,11 +4,15 @@ import {RouterModule} from '@angular/router';
 import { appRoutes } from './route';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
+import { HomePageComponent } from './PrintWisePage/HomePage/home-page/home-page.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    HomePageComponent,
+ 
   ],
   imports: [
     BrowserModule,

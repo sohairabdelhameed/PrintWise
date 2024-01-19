@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&family=Josefin+Sans:wght@300&display=swap');
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #4e54c8, #4d52b0);
+
+  color: #fff;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  max-width: 600px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+h1 {
+  color: #333;
+  font-size: 3em;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-family: 'EB Garamond';
+}
+
+h2 {
+  color: #555;
+  font-size: 2em;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  font-family: 'Josefin Sans';
+}
+
+p {
+  color: #777;
+  font-size: 1.2em;
+  line-height: 1.6;
+  font-family: 'Josefin Sans';
+  font-weight: 800;
+}
+
+a {
+  color: #4e54c8;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #8f94fb;
+}
+/* Add some styling for the translate button */
+.translate-btn {
+    cursor: pointer;
+    color: #007bff;
+  }
+  
