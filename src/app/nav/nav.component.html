@@ -32,11 +32,24 @@
             
           </ul>
           <ul class="navbar-nav float-end" >
-            <li class=" nav-item ">
-              <a class="nav-link"href="./logIn" >Login</a>
-            </li>
+            <div *ngIf="!username; else loggedInUser">
+              <!-- Display Login link if the user is not logged in -->
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/logIn">Login</a>
+                </li>
+              </ul>
+            </div>
+            <ng-template #loggedInUser>
+              <!-- Display username if the user is logged in -->
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/.">{{ username }}</a>
+                </li>
+              </ul>
+            </ng-template>
             <li class="nav-item">
-              <a class="nav-link" href="#">User</a>
+              <a class="nav-link" href="./upload">Upload</a>
             </li>
           </ul>
         </div>

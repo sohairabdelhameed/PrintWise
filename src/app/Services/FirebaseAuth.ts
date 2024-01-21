@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
 import * as firebase from 'firebase';
 
 @Injectable({
@@ -50,4 +50,14 @@ export class AuthService {
 
     return userDocRef.set(userData);
   }
+  getCurrentUsername(): Observable<string | null> {
+    return this.afAuth.authState.pipe(
+      map(user => (user ? user.displayName : null))
+    );
+  }
+  
+  signOut(): Promise<void> {
+    return this.afAuth.auth.signOut();
+  }
+
 }
